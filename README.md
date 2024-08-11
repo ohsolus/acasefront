@@ -2,7 +2,7 @@
 
 ## Acerca de este repositorio
 
-Este es el repositorio frontend del proyecto de Agenda del Calendario Académico para servicios estudiantiles (ACASE). Desarrollado principalmente con tecnologías Vite js, React, Tailwind css y shadcn ui.
+Este es el repositorio frontend del proyecto de Agenda del Calendario Académico para servicios estudiantiles (ACASE). Desarrollado principalmente con tecnologías Vite js, React, Tailwind css, Typescript y shadcn ui.
 
 ## clonar este repositorio
 
