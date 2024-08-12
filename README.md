@@ -2,7 +2,7 @@
 
 ## Acerca de este repositorio
 
-Este es el repositorio frontend del proyecto de Agenda del Calendario Académico para servicios estudiantiles (ACASE). Desarrollado principalmente con tecnologías Vite js, React, Tailwind css, Typescript y shadcn ui.
+Este es el repositorio frontend del proyecto de Agenda del Calendario Académico para servicios estudiantiles (ACASE). Desarrollado principalmente con tecnologías Vite js, React, Tailwind css, Typescript y Shadcn/ui.
 
 ## clonar este repositorio
 
@@ -14,9 +14,11 @@ Luego, corre el proyecto en local utilizando con "npm run dev".
 
 Te aparecerá la dirección del localhost, al abrir verás algo similar a esto:
 
-![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://i.pinimg.com/736x/80/e2/39/80e2392266f8d83544069e5b22c8f311.jpg)
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://i.pinimg.com/736x/f0/c2/a5/f0c2a5f093b9972160dfc30bb30ef698.jpg)
 
 Para empezar a contribuir, toma en cuenta que no debes hacer cambios en la rama principal (Debes revisar la rama en la que te encuentras, no se deben hacer cambios en la rama del origen(master o main) ya que se puede perjudicar al proyecto). En cambio, crea una rama basada en la rama develop, entonces subes tus cambios al repositorio y realizas un pull request, es decir una petición para que se agreguen los cambios al proyecto. Despues de revisar esta rama y ver que tus cambios no afectarán negativamente al proyecto, este cambio será agregado por el administrador del repositorio (merge & pull request). ¡Finalmente tus cambios estarán listos para verse!
+
+Ten en cuenta que cada vez que cambies de rama deberás ejecutar el comando "npm install". Recuerda mantener tu repositorio actualizado con los últimos cambios.
 
 ## Contribuir
 
@@ -38,7 +40,7 @@ Hay muchas formas en las que puedes participar en este proyecto, por ejemplo:
 
 Este repositorio incluye links para que conozcas la versión para backend y despliegue del mismo.
 
-- Repositorio Backend [ver respositorio](https://github.com/ohsolus/acaseback)
+- Repositorio Backend [Enlace](https://github.com/ohsolus/acaseback)
 
 - Despliegue Backend [Enlace no disponible](https://github.com/ohsolus)
 
@@ -61,7 +63,7 @@ Este proyecto está desarrollado sin fines de lucro, por favor no utilizar con f
 
 Grupo de servidores comunitarios de Ing. Informática, Universidad Nacional Experimental de Guayana (UNEG)
 
-## Donde puedo encontrar ayuda para entender el contenido de este proyecto
+## ¿Dónde puedo encontrar ayuda para entender el contenido de este proyecto?
 
 - Iniciar en React js [Enlace de video](https://www.youtube.com/watch?v=GJCi3N_yU4I)
 - Shadcn ui [Enlace de video](https://www.youtube.com/watch?v=URpcaFga8rY)
