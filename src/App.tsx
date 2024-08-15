@@ -1,6 +1,6 @@
 import "./App.css";
-import { Footer } from "./features/footer";
-import Landing from "./features/landing/landing-page";
+import { Footer } from "./features/landing/components/footer";
+import { Landing } from "./features/landing/pages/landing-page";
 
 export default function App() {
   return (
