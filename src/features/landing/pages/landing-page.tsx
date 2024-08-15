@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription } from "@/components/ui/card";
 import UNEG from "@/assets/UNEG.png";
 import TEPUY from "@/assets/tepuy.jpg";
 
-export default function Landing() {
+export function Landing() {
   return (
     <div
       className="bg-cover bg-center h-screen"
