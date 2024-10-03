@@ -2,8 +2,19 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription } from "@/components/ui/card";
 import UNEG from "@/assets/UNEG.png";
 import TEPUY from "@/assets/tepuy.jpg";
+import { Link, useNavigate } from "react-router-dom";
 
 export function Landing() {
+  const navigate = useNavigate();
+
+  const handleRedirectLogin = () => {
+    navigate("/login");
+  };
+
+  const handleRedirectRegister = () => {
+    navigate("/register");
+  };
+
   return (
     <div
       className="bg-cover bg-center h-screen"
@@ -28,9 +39,16 @@ export function Landing() {
               <h2 className="text-2xl font-bold mt-5">CIVA 2024</h2>
               <CardDescription className="mt-4">
                 <div className="justify-center flex space-x-2 mt-5">
-                  <Button className="bg-blue-800">Inicia sesión</Button>
+                  <Button className="bg-blue-800" onClick={handleRedirectLogin}>
+                    Inicia sesión
+                  </Button>
 
-                  <Button className="bg-blue-800">Registrate</Button>
+                  <Button
+                    className="bg-blue-800"
+                    onClick={handleRedirectRegister}
+                  >
+                    Registrate
+                  </Button>
                 </div>
               </CardDescription>
             </CardContent>
@@ -40,9 +58,12 @@ export function Landing() {
       <div className="flex justify-center">
         <Card className="border-0 rounded-lg bg-blue-800 rounded-lg w-1/3 ">
           <CardContent>
-            <p className="text-xl text-white font-bold mt-3">
+            <Link
+              to="https://www.uneg.edu.ve/"
+              className="text-xl text-white font-bold mt-3"
+            >
               UNEG, la luz de Guayana
-            </p>
+            </Link>
           </CardContent>
         </Card>
       </div>

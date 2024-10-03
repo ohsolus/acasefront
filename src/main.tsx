@@ -1,11 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
+import App from "./App";
 import "./App.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import AuthProvider from "./components/authProvider";
+import ProtectedRoute from "./components/protectedRoute";
+import { Login } from "./features/auth/pages/login";
+import { HomePage } from "./features/home/pages/home";
+import { Register } from "./features/auth/pages/register";
 import { BasePage } from "./components/ui/base-page";
 import { ErrorPage } from "./components/ui/error-page";
-import { Toaster } from "./components/ui/toaster";
+import Logout from "./features/auth/pages/logout";
 
 const router = createBrowserRouter([
   {
@@ -14,29 +19,28 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        async lazy() {
-          const { Landing } = await import(
-            "./features/landing/pages/landing-page"
-          );
-
-          return { Component: Landing };
-        },
+        element: <App />,
       },
       {
         path: "/login",
-        async lazy() {
-          const { Login } = await import("./features/auth/pages/login");
-
-          return { Component: Login };
-        },
+        element: <Login />,
       },
       {
         path: "/register",
-        async lazy() {
-          const { Register } = await import("./features/auth/pages/register");
+        element: <Register />,
+      },
+      {
+        path: "/logout",
+        element: <Logout />,
+      },
 
-          return { Component: Register };
-        },
+      {
+        path: "/home",
+        element: (
+          <ProtectedRoute allowedRoles={["viewer"]}>
+            <HomePage />,
+          </ProtectedRoute>
+        ),
       },
     ],
   },
@@ -44,8 +48,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-
-    <Toaster />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );
