@@ -6,6 +6,9 @@ import { Label } from "./ui/label";
 
 interface Props {
   id: string;
+  /*here*/
+  value: string;
+  /**/
   labelProps: Omit<
     React.LabelHTMLAttributes<HTMLLabelElement>,
     "className" | "id"
@@ -22,6 +25,9 @@ interface Props {
 
 export function TextField({
   id,
+  /*here*/
+  value,
+  /**/
   labelProps,
   description,
   inputProps,
@@ -46,6 +52,9 @@ export function TextField({
       <Input
         id={id}
         name={id}
+        /*here*/
+        value={value}
+        /* */
         aria-invalid={Boolean(errorMessage)}
         {...inputProps}
       />

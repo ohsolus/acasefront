@@ -10,6 +10,7 @@ import { Label } from "./ui/label";
 
 interface Props {
   id: string;
+  value: string;
   labelProps: Omit<
     React.LabelHTMLAttributes<HTMLLabelElement>,
     "className" | "id"
@@ -26,6 +27,7 @@ interface Props {
 
 export function PasswordField({
   id,
+  value,
   labelProps,
   description,
   inputProps,
@@ -48,6 +50,7 @@ export function PasswordField({
       <div className="relative">
         <Input
           id={id}
+          value={value}
           name={id}
           aria-invalid={Boolean(errorMessage)}
           className="pr-12"
