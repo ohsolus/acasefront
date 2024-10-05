@@ -11,6 +11,7 @@ import { Register } from "./features/auth/pages/register";
 import { BasePage } from "./components/ui/base-page";
 import { ErrorPage } from "./components/ui/error-page";
 import Logout from "./features/auth/pages/logout";
+import { FaqPage } from "./features/support/pages/faq-page";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,14 @@ const router = createBrowserRouter([
         element: (
           <ProtectedRoute allowedRoles={["viewer"]}>
             <HomePage />,
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "/support",
+        element: (
+          <ProtectedRoute allowedRoles={["viewer"]}>
+            <FaqPage />,
           </ProtectedRoute>
         ),
       },

@@ -1,10 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
-import NavBar from "@/components/ui/navbar";
+import { Main } from "@/components/ui/main";
 
 export function HomePage() {
   return (
-    <div className="bg-cover bg-black bg-center h-screen">
-      <NavBar />
+    <Main className="bg-cover bg-center h-screen">
       <div className="flex p-4 justify-center py-7"></div>
 
       <div className="justify-center flex p-2">
@@ -18,6 +17,6 @@ export function HomePage() {
           </Card>
         </div>
       </div>
-    </div>
+    </Main>
   );
 }
