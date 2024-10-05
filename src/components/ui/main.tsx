@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import NavBar from "./navbar";
 
 export function Main({
   className,
@@ -7,5 +8,11 @@ export function Main({
   className?: string;
   children?: React.ReactNode;
 }) {
-  return <main className={cn("flex-1", className)}>{children ?? null}</main>;
+  return (
+    <main className={cn("flex-1", className)}>
+      {" "}
+      <NavBar />
+      {children ?? null}
+    </main>
+  );
 }
