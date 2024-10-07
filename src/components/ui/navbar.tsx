@@ -10,6 +10,7 @@ import {
 } from "@radix-ui/react-dropdown-menu";
 import { Button } from "./button";
 import { useNavigate } from "react-router-dom";
+import { Avatar, AvatarFallback } from "@radix-ui/react-avatar";
 
 const NavBar = () => {
   const { handleLogout } = useAuth();
@@ -25,11 +26,22 @@ const NavBar = () => {
   };
 
   const handlePerfil = () => {
-    navigate("/perfil");
+    navigate("/profile");
   };
 
+  {
+    /*For the avatar initials*/
+  }
+
+  const firstName = "Jessica" || "";
+  const paternalSurname = "Farrera" || "";
+
+  const initials = `${firstName.charAt(0)}${paternalSurname.charAt(
+    0
+  )}`.toUpperCase();
+
   return (
-    <nav className="bg-gray-900 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-100 text-white p-2 fixed top-0 left-0 w-full">
+    <nav className="bg-gray-900 backdrop-filter backdrop-blur-sm bg-opacity-100 text-white fixed top-0 left-0 w-full z-50">
       <div className="container space-x-4 mx-auto flex justify-between ">
         <a href="/home" className="mt-2">
           <span className="text-1xl text-muted-foreground transition-colors hover:text-foreground">
@@ -92,6 +104,22 @@ const NavBar = () => {
               </DropdownMenuGroup>
             </DropdownMenuContent>
           </DropdownMenu>
+
+          <Avatar className="mt-2 h-6 w-6 rounded-full object-cover shadow-md bg-gray-100 ">
+            <AvatarFallback className="text-black font-semibold ">
+              {initials ||
+                "https://c0.klipartz.com/pngpicture/782/114/gratis-png-icono-de-perfil-icono-de-usuario-en-un-circulo-thumbnail.png"}
+            </AvatarFallback>
+
+            {/* <AvatarImage
+              className="gap-10px mb-0.5 h-20 w-20 rounded-full object-cover shadow-md"
+              src={
+                avatar ||
+                "https://c0.klipartz.com/pngpicture/782/114/gratis-png-icono-de-perfil-icono-de-usuario-en-un-circulo-thumbnail.png"
+              }
+            />*/}
+            {/*Just in case of avatar was not an image*/}
+          </Avatar>
         </div>
       </div>
     </nav>

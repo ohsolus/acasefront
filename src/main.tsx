@@ -12,6 +12,7 @@ import { BasePage } from "./components/ui/base-page";
 import { ErrorPage } from "./components/ui/error-page";
 import Logout from "./features/auth/pages/logout";
 import { FaqPage } from "./features/support/pages/faq-page";
+import { EditProfilePage } from "./features/profile/pages/edit-profile-page";
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,14 @@ const router = createBrowserRouter([
         ),
       },
     ],
+  },
+  {
+    path: "/profile",
+    element: (
+      <ProtectedRoute allowedRoles={["viewer"]}>
+        <EditProfilePage />,
+      </ProtectedRoute>
+    ),
   },
 ]);
 
