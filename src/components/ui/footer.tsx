@@ -5,7 +5,7 @@ export function Footer() {
 
   return (
     <footer className="bg-white/30 backdrop-blur-md border-t border-white/20 p-2 fixed bottom-0 left-0 w-full">
-      <div className="container flex h-full flex-col justify-between gap-6 lg:flex-row lg:items-center">
+      <div className="ml-5 container flex h-full flex-col justify-between gap-6 lg:flex-row lg:items-center">
         <ul className="flex flex-col items-center gap-4 lg:flex-row">
           <li>
             <Dialog>
