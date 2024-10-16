@@ -45,8 +45,8 @@ const NavBar = () => {
     /*For the avatar initials*/
   }
 
-  const firstName = "Jessica" || "";
-  const paternalSurname = "Farrera" || "";
+  const firstName = "Yesenia";
+  const paternalSurname = "Larenas";
 
   const initials = `${firstName.charAt(0)}${paternalSurname.charAt(
     0
@@ -127,7 +127,7 @@ const NavBar = () => {
                   </Button>
                 </DropdownMenuTrigger>
 
-                <DropdownMenuContent className="w-56">
+                <DropdownMenuContent className="w-56 bg-gray-900 justify-start">
                   <p className="items-center justify-center p-6 text-center text-sm text-muted-foreground">
                     No hay notificaciones
                   </p>
@@ -160,15 +160,6 @@ const NavBar = () => {
                       >
                         <LogOut className="mr-3 h-4 w-4" />
                         <span className="text-md">Cerrar sesión</span>
-                      </Button>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <Button
-                        className="w-full text-left justify-start"
-                        onClick={handleSupport}
-                      >
-                        <LifeBuoy className="mr-3 h-4 w-4" />
-                        <span className="text-md">Soporte</span>
                       </Button>
                     </DropdownMenuItem>
                   </DropdownMenuGroup>

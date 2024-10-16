@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import NavBar from "./navbar";
+import { Footer } from "./footer";
 
 export function Main({
   className,
@@ -13,6 +14,7 @@ export function Main({
       {" "}
       <NavBar />
       {children ?? null}
+      <Footer />
     </main>
   );
 }

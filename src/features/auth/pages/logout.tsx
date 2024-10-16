@@ -18,7 +18,7 @@ function Logout() {
   }, []); // Solo se ejecuta una vez al cargar la ruta
 
   return (
-    <Main className="flex flex-col items-center justify-center px-6 py-12 bg-gradient-to-r from-sky-50 via-sky-200 to-sky-300">
+    <div className="flex flex-col items-center justify-center px-6 py-12 bg-gradient-to-r from-sky-50 via-sky-200 to-sky-300">
       <div className="w-full max-w-lg space-y-8">
         <div className="space-y-2">
           <Card className="shadow-lg rounded-lg bg-white border border-white rounded-lg p-6 shadow-lg">
@@ -28,7 +28,7 @@ function Logout() {
           </Card>
         </div>
       </div>
-    </Main>
+    </div>
   );
 }
 

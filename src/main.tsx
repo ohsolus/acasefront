@@ -13,6 +13,9 @@ import { ErrorPage } from "./components/ui/error-page";
 import Logout from "./features/auth/pages/logout";
 import { FaqPage } from "./features/support/pages/faq-page";
 import { EditProfilePage } from "./features/profile/pages/edit-profile-page";
+import QuickNotes from "./features/calendar/components/quick-note";
+import NotificationsTable from "./features/notifications/components/notifications";
+import AcademicEvents from "./features/activities/components/academicEvents";
 
 const router = createBrowserRouter([
   {
@@ -59,6 +62,30 @@ const router = createBrowserRouter([
     element: (
       <ProtectedRoute allowedRoles={["viewer"]}>
         <EditProfilePage />,
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: "/notes",
+    element: (
+      <ProtectedRoute allowedRoles={["viewer"]}>
+        <QuickNotes />,
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: "/notifications",
+    element: (
+      <ProtectedRoute allowedRoles={["viewer"]}>
+        <NotificationsTable />,
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: "/activities",
+    element: (
+      <ProtectedRoute allowedRoles={["viewer"]}>
+        <AcademicEvents />
       </ProtectedRoute>
     ),
   },

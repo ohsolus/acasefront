@@ -10,7 +10,7 @@ import { SignInPage } from "../components/sign-in-page";
 
 export function Login() {
   return (
-    <Main className="flex flex-col items-center justify-center px-6 py-12 bg-gradient-to-r from-sky-50 via-sky-200 to-sky-300">
+    <div className="flex flex-col items-center justify-center px-6 py-12 bg-gradient-to-r from-sky-50 via-sky-200 to-sky-300">
       <div className="w-full max-w-lg space-y-8">
         <h1 className="text-3xl font-bold md:text-center">
           Bienvenido de vuelta
@@ -45,6 +45,6 @@ export function Login() {
           </Link>
         </p>
       </div>
-    </Main>
+    </div>
   );
 }
