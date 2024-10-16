@@ -36,7 +36,7 @@ export function Landing() {
             </div>
             <CardContent className="items-center p-4">
               <h2 className="text-2xl font-bold mt-5">Calendario Académico</h2>
-              <h2 className="text-2xl font-bold mt-5">CIVA 2024</h2>
+              <h2 className="text-2xl font-bold mt-5">2024</h2>
               <CardDescription className="mt-4">
                 <div className="justify-center flex space-x-2 mt-5">
                   <Button className="bg-blue-800" onClick={handleRedirectLogin}>

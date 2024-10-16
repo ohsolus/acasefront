@@ -12,8 +12,8 @@ export function GeneralForm() {
 
   //In case of avatar was not an image, then could be initials of the name
 
-  const firstName = "Jessica" || "";
-  const paternalSurname = "Farrera" || "";
+  const firstName = "Yesenia";
+  const paternalSurname = "Larenas";
 
   const initials = `${firstName.charAt(0)}${paternalSurname.charAt(
     0
